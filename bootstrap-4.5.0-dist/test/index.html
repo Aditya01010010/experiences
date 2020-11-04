@@ -1,0 +1,48 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <title> experiences - Text To Speech </title>
+
+        <script>
+            function textToAudio() {
+                let msg = document.getElementById("text-to-speech").value;
+
+                let speech = new SpeechSynthesisUtterance();
+                
+                speech.lang="en-Us";
+
+                speech.text=msg;
+                speech.volume=1;
+                speech.rate=1;
+                speech.pitch=1;
+
+                window.speechSynthesis.speak(speech);
+
+            }
+        </script>       
+
+
+    </head>
+
+    <body>
+        
+        <div class="bg">
+
+            <div class="box">
+
+                <div>
+                    <input type="text" id="text-to-speech" placeholder="Enter text to speak" >
+                </div>
+        
+                <div>
+                    <button type="button" onclick="textToAudio()" > Speak </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

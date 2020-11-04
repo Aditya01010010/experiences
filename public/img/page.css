@@ -1,0 +1,24 @@
+.navbar {
+    padding: 1.5rem;    
+}
+
+.padding {
+    padding-bottom : 2rem;
+
+}
+
+.carousel-inner img {
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    background-color : #333333;
+    color : blanchedalmond;
+    padding-top : 2rem;
+}
+
+[class*="col-"] {
+    padding: 1rem;
+}
+

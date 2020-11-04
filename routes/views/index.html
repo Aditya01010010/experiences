@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<title>experiences.</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="/img/style.css" rel="stylesheet" type="text/css">
+	
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">experiences.</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#a">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#c">Cities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#g">Text-to-Speech</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--- Image Slider -->
+
+<div id="slides" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/milan.jpg">
+        </div>
+        <div class="carousel-item">
+            <img src="img/ny.jpg">
+        </div>
+        <div class="carousel-item">
+            <img src="img/paris.jpg">
+        </div>
+    </div>
+</div>
+
+<br><br><br><br>
+
+
+<!--- Jumbotron -->
+
+<div class="container-fluid">
+    <div class="row jumbotron">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 id="a" class="display-4">About</h1>
+                <hr>
+            </div>
+            <div class="col-12">
+                <p class="lead">
+                    This global lockdown that has impacted our daily life in so,so many ways seems no closer to ending than it 
+                    did in the beginning. Among the so very many things we have had to get accustomed to, one is life without
+                    travel. <br> 
+                    So, in these truly dark and testing times, we've tried to lighten up your day by giving you a virtual 
+                    experince of vacationing in the most beautiful cities acros the globe.     
+                </p>        
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--- Welcome Section -->
+
+
+
+<!--- Three Column Section -->
+
+
+<!--- Two Column Section -->
+
+<hr class="my-4">
+
+
+<!--- Fixed background -->
+
+<figure>
+    <div class="fixed-wrap">
+        <div id="fixed">
+            
+        </div>
+        
+    </div>
+
+    <div id="c" class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">Cities</h1>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <div class="container-fluid padding text">
+        <div class="row padding">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <img class="card-img-top" src="img/card.png">
+                    <div class="card-body">
+                        <h4 class="card-title">Barcelona</h4>
+                        <p class="card-text">
+                            Beaches, history, culture, beauty and aesthetic, Barcelona scores everywhere. Also, if you're a 
+                            football fan, you definitely don't wanna miss this one!
+                            So, we present to you the virtual Barcelona vacation. 
+                        </p>
+                        <a href="/barcelona" target="_blank" class="btn btn-outline-secondary">experience.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</figure>
+
+<div class="row welcome text-center">
+    <hr>
+</div>
+
+
+
+
+<div class="container-fluid">
+    <div class="row jumbotron">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 id="g" class="display-4">Text-to-Speech</h1>
+                <hr>
+            </div>
+            <div class="col-12">
+                <p class="lead">
+                    To add flavour to your vacation, learn to pronounce Spanish words!  <br>
+                    Simply type in the word or phrase
+                    you want to learn about and hit the Speak button.
+                    <br><br>
+                    <input type="text" id="text-to-speech" placeholder="Enter Text to Speak"/>
+                    <br><br>
+                    <a onclick="javascript:textToAudio()" class="btn btn-outline-secondary">Speak</a>                      
+                </p>        
+            </div>
+            <div class="col-12">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--- Footer -->
+
+<footer>
+    <div class="container-fluid padding">
+        
+    
+        <div class="row text-center">
+    
+            <div class="col-12">
+                <h5>Made with &hearts; by Aditya Rajan</h5>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+<script>
+    function textToAudio() { 
+        let msg = document.getElementById("text-to-speech").value;
+
+        let speech = new SpeechSynthesisUtterance(); 
+        speech.lang = "en-US";
+
+        speech.text = msg; 
+        speech.volume = 1; 
+        speech.rate = 1; 
+        speech.pitch = 1;
+
+        window.speechSynthesis.speak( speech );
+}
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
