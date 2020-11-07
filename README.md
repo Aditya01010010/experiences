@@ -13,6 +13,6 @@ Check out the website here:
 
 ## Instructions ##
 	  After downloading the code, open a new terminal and run the following command:
-	    node app
+	    	node app
 	  This command starts the website on localhost:3000
 
